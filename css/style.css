@@ -1,3 +1,77 @@
-body {
-  background-color: red;
+/* GENERAL RULES */
+
+* {
+
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+/* CLASSE PER FAR COLORARE DI GIALLO IL QUADRATO SELEZIONATO SE NUMERO <=5 */
+
+.yellow {
+
+  background-color: yellow;
+
+}
+
+/* CLASSE PER FAR COLORARE DI VERDE IL QUADRATO SELEZIONATO SE NUMERO >5 */
+
+.green {
+
+  background-color: green;
+
+}
+
+/* WRAPPER RULES */
+
+.wrapper {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 0 10%;
+
+}
+
+
+/* SQUARE CONTAINER RULES */
+
+  .square-container {
+
+    height: 100%;
+    width: 600px;
+    margin-top: 10%;
+
+  }
+
+/* SQUARE RULES */
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  float: left;
+  height: 100px;
+  width: 100px;
+  cursor: pointer;
+  border: 1px solid black;
+  transition: 0.5s;
+}
+
+.square:hover {
+
+  background-color: lightgrey;
+
+}
+
+/* NUMBER RULES */
+
+span {
+
+  font-size: 25px;
+  
 }
