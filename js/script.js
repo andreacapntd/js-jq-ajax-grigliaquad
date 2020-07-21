@@ -5,9 +5,6 @@ function gameListenerClick() {
 
     var squareSelected = $(this);
 
-    // squareSelected.html('');
-    // squareSelected.removeClass('yellow', 'green');
-
     changeColorSquare(squareSelected);
 
   })
