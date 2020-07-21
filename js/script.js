@@ -43,7 +43,9 @@ function changeColorSquare(squareSelected) {
         }
 
       } else {
+
         console.log('error');
+
       }
     },
     error: function(request, state, error) {
@@ -57,41 +59,11 @@ function changeColorSquare(squareSelected) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function init() {
 
   gameListenerClick();
 
 };
-
-
-
-
-
 
 
 
