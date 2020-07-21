@@ -8,21 +8,7 @@
 
 }
 
-/* CLASSE PER FAR COLORARE DI GIALLO IL QUADRATO SELEZIONATO SE NUMERO <=5 */
 
-.yellow {
-
-  background-color: yellow;
-
-}
-
-/* CLASSE PER FAR COLORARE DI VERDE IL QUADRATO SELEZIONATO SE NUMERO >5 */
-
-.green {
-
-  background-color: green;
-
-}
 
 /* WRAPPER RULES */
 
@@ -62,16 +48,31 @@
   transition: 0.5s;
 }
 
-.square:hover {
+/* CLASSE PER FAR COLORARE DI GIALLO IL QUADRATO SELEZIONATO SE NUMERO <=5 */
+
+.square.yellow {
+
+  background-color: yellow;
+
+}
+
+/* CLASSE PER FAR COLORARE DI VERDE IL QUADRATO SELEZIONATO SE NUMERO >5 */
+
+.square.green {
+
+  background-color: green;
+
+}
+/* .square:hover {
 
   background-color: lightgrey;
 
-}
+} */
 
 /* NUMBER RULES */
 
 span {
 
   font-size: 25px;
-  
+
 }

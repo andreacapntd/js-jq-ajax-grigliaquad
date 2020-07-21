@@ -1,27 +1,64 @@
+
 function gameListenerClick() {
 
-  var target = $('.square');
-  target.click(function() {
+  $(document).on('click', '.square', function(){
 
-    $.ajax({
+    var squareSelected = $(this);
 
-      url: 'https://flynn.boolean.careers/exercises/api/random/int',
-      method: 'GET',
-      success: function(data, state) {
+    // squareSelected.html('');
+    // squareSelected.removeClass('yellow', 'green');
 
-        
+    changeColorSquare(squareSelected);
 
-      },
-      error: function(request, state, error) {
+  })
 
-        console.log(request);
-        console.log(state);
-        console.log(error);
-
-      }
-    })
-  });
 };
+
+function changeColorSquare(squareSelected) {
+
+  $.ajax({
+
+    url: 'https://flynn.boolean.careers/exercises/api/random/int',
+    method: 'GET',
+    success: function(data, state) {
+
+      var squareTarget = squareSelected;
+
+      var success = data["success"];
+      var value = data["response"];
+      console.log(value);
+
+      if (success) {
+
+        if (value <= 5) {
+
+          squareTarget.html(value);
+          squareTarget.addClass('yellow');
+          squareTarget.removeClass('green');
+
+        } else {
+
+          squareTarget.html(value);
+          squareTarget.addClass('green');
+          squareTarget.removeClass('yellow');
+
+
+        }
+
+      } else {
+        console.log('error');
+      }
+    },
+    error: function(request, state, error) {
+
+      console.log(request);
+      console.log(state);
+      console.log(error);
+
+    }
+  })
+}
+
 
 
 
